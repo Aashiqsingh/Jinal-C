@@ -1,23 +1,12 @@
 
-
-// 12 13 14 15 16 
-
-
-// Enter number which u want to find : 19
-
-// // 14 is present at index 3 in the array.
-
-
-// This 
-
 #include<stdio.h>
 #include<conio.h>
 
 void main(){
 
 
-    int arr[5],find;
-    int flag = 0;
+    int arr[5],find,update;
+    // int flag = 0;
 
     for(int i=0; i<5; i++)
     {
@@ -34,34 +23,35 @@ void main(){
 
     printf("\n\n Enter number which u want to find :");
     scanf("%d",&find); // 15
+    printf("Enter number which u update in position ");
+    scanf("%d",&update);
 
     for(int i=0; i<5; i++){
 
         if(arr[i] == find)
         {
             printf("%d is present at Position %d in the array ",find,i+1);
-            flag = 0;
+            arr[i] = update;
+            // flag = 0;
             break;
         }
-        else{
-            flag = 1;
-        }
+        // else{
+        //     flag = 1;
+        // }
 
-
+    
     }
 
-    if(flag == 1){
-        printf("Not found This number ");
+    // printf("Updated value = %d",update);
+    // if(flag == 1){
+    //     printf("Not found This number ");
+    // }
+
+    for(int i=0;i<5;i++)
+    {
+        printf("\n%d ",arr[i]);
     }
+
 
 
 }
-
-
-// 11 12 13 14 15 
-
-// find 13 
-// printf("Enter value for update ") // 22
-
-
-// 11 12 22 14 15
